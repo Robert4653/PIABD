@@ -1,0 +1,3 @@
+1. WHERE cena > X Warunek że cena jest powyżej kwoty x
+2. WHERE cena > X AND cena <= Y Warunek że cena jest większa od X kwoty i mniejsza lub równa od Y kwoty
+3.
