@@ -1,3 +1,7 @@
-1. WHERE cena > X Warunek że cena jest powyżej kwoty x
-2. WHERE cena > X AND cena <= Y Warunek że cena jest większa od X kwoty i mniejsza lub równa od Y kwoty
-3.
+1. WHERE cena > X                   -Warunek że cena jest powyżej kwoty x
+2. WHERE cena > X AND cena <= Y     -Warunek że cena jest większa od X kwoty i mniejsza lub równa od Y kwoty
+3. WHERE cena <> X and cena <> Y    -Warunek że cena nie może być równa X ani Y
+/*nierówny*/;    <> -to skrót do nierówny
+4. WHERE cena <> X and cena <> Y ORDER BY cena DESC LIMIT 3     -posortowane malejąco i ceny nie równe X i Y
+/*nierówny za wyjątkiem dwóch 3 rekordy posortowane malejąco - DESC*/  
+5. WHERE kolor Between 'A' AND 'C'; /*kolory od A do C*/     -kolor który zaczyna się od a do c
