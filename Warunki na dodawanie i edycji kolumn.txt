@@ -1,2 +1,3 @@
 INSERT INTO auto (`rocznik`, `cena`) VALUES ('2020', '140000');   -Warunek na to żeby dodać kolumnę to bazy danych auto
 UPDATE auto SET kolor='pomarańczowy' WHERE auto_id=42      -Warunek na to żeby zmienić kolumnę "kolor" w bazie auto w kolumnie 42 
+UPDATE auto SET cena='140000' * 1.5 WHERE auto_id=42;       -Warunek na to żeby cena pomnożyć razy 1,5 raza w bazie auto na kolumnie o id 42
