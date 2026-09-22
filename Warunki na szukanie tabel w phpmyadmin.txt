@@ -1,0 +1,41 @@
+Zad.1 Wyświetl uczniów mieszkających w Łodzi
+WHERE miejscowość = 'Łódź'
+
+Zad.2 Wyświetl uczniów którzy są z Łodzi których hobby do programowanie
+WHERE miejscowość = 'Łódź' AND hobby = 'programowanie'
+
+Zad.3 Wyświetl uczniów którzy są z Łodzi lub Warszawy
+WHERE miejscowość = 'Łódź' OR miejscowość = 'Warszawa'
+
+Zad.4 Wyświetl uczniów z trzech wskazanych miejscowości 
+WHERE miejscowość in ( 'lodz' 'krakow' 'warszawa' ) ORDER BY miejscowość ABC;
+
+Zad.5 Wyświetl uczniów którzy nie mieszkają w Warszawie ani Krakowie 
+Select imie, nazwisko, miejscowość FROM uczniowie WHERE miejscowość NOT IN ('lodz' 'krakow' 'warszawa' ) ORDER BY miejscowość ABC;
+
+Zad.6 Wyświetl uczniów których nazwisko zaczyna się od litery K
+WHERE nazwisko LIKE 'K%';
+
+Zad.7 Wyświetl uczniów których nazwisko kończy się od litery k
+WHERE nazwisko LIKE- '%k';
+
+Zad.8 Wyświetl uczniów których nazwisko kończy i zaczyna się od litery k
+WHERE nazwisko LIKE- 'K%k';
+
+Zad.9 Wyświetl uczniów których ostatnia litera to "a" a druga to "i" 
+WHERE nazwisko LIKE '_i%a';
+
+Zad.10 Wyświetl uczniów urodzonych w latach 2007-2008
+WHERE data_urodzenia Between '2007-01-01' AND '2008-12-31'; 
+
+Zad.11 Wyświetl wszystkie miejscowości bez powtórzeń 
+ORDER BY miejscowość ABC;
+
+Zad.12 WYświetl
+SELECT DISTICNT miejscowosc FROM uczniowie ORDER BY miejscowosc;
+
+Zad.13 Policz wszystskich uczniów z Łodzi
+SELECT COUNT(*) As chlopaki_fajnie-z-Lodzi FROM uczniowie WHERE miejscowosc='Lodz';
+
+Zad.14 Wyświetl hobby które występuje u co najmniej 10 uczniów
+SELECT hobby, COUNT(*) AS liczba_uczniow FROM uczniowie GROUP BY hobby HAVING COUNT (*) >= 10 ORDER BY liczba_uczniow DESC;
