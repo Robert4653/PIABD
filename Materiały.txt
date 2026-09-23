@@ -2,8 +2,8 @@ POLECENIA SQL:
 1.logowanie: mysql -uroot -p
 2.Pokazanie bazy danych: show databases;
 3.stwórz baze: create databases;
-4.pozysikwanie zawartości tabeli: describe
-5. tworzenie tabeli: create tables;
-6. wybór bazy: use (nazwa bazy)
+4.pozyskiwanie zawartości tabeli: describe
+5.tworzenie tabeli: create tables;
+6.wybór bazy: use (nazwa bazy)
 
 
