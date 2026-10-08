@@ -1,0 +1,13 @@
+Temat: Klauzule 
+Zad.1.Policz uczniów urodzonych w poszczególnych latach
+SELECT year('data_urodzenia') AS rok_urodzenia_ucznia,
+COUNT(*) AS liczba_urodzeń_uczniów 
+FROM 4bgr1.uczniowie 
+GROUP by year('data_urodzenia')
+ORDER BY rok_urodzenia_ucznia ASC;
+
+Zad.2 podaj przykład funkcji MIN na przykład z najmłodszym uczniem 
+SELECT MIN(data_urodzenia) AS wiek FROM uczniowie;
+
+login: robertr
+
