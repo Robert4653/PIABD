@@ -5,5 +5,17 @@ POLECENIA SQL:
 4.pozyskiwanie zawartości tabeli: describe
 5.tworzenie tabeli: create tables;
 6.wybór bazy: use (nazwa bazy)
-
+7.Wyłączenie serwera : mysqladmin -u root shutdown
+8.Uruchomienie serwera mysql jako samodzielne aplikacje : mysql -console 
+9.Zatrzymanie usługi : net stop (nazwa usługi)
+10.Nazwiązanie połączenie z serwerem : mysql -u root -password=hasło /mysql -u root -phasło
+11.Kończenie połaczenia : quit 
+12.Usuwanie baz danych : drop database (nazwa bazy danych)
+13.Logowanie do serwera z wyborem bazy : mysql -u nazwa_użytkownika -phasło nazwa_bazy
+14.Stwórz użytkownika i nadaj mu hasło : create user robert identified by 'kalafior';
+15.usuwanie konta użytkownika : drop user stachu;
+16.zmien nazwy użytkownika : rename user stachu to stachu_nowy;
+17.Zmiana hasła do konta : set password for (nazwa) = password('nowe hasło')
+18.Nadanie praw do konta użytkownika : GRANT usage   ON* to (nazwa);
+19.Drugi sposób zmiany hasła użytkownika! : GRANT usage       ON* TO (nazwa) identified bys 'hasło';
 
