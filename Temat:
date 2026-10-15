@@ -6,3 +6,4 @@ Praca Domowa: do tabeli uczniowie wstawiamy rekord z zdjeciem i kolumne i ekspor
 BACKUP DATABASE [NazwaTwojejBazy]
 TO DISK = 'C:\Backupy\moja_baza.bak'
 WITH FORMAT, MEDIANAME = 'SQLServerBackup', NAME = 'Pelny Backup Bazy';
+mysqldump -uroot 
