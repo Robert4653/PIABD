@@ -9,5 +9,50 @@ ORDER BY rok_urodzenia_ucznia ASC;
 Zad.2 podaj przykład funkcji MIN na przykład z najmłodszym uczniem 
 SELECT MIN(data_urodzenia) AS wiek FROM uczniowie;
 
-login: robertr
+Zad.21 Wyświetl imię i nazwisko ucznia w jednej kolumnie - 
+SELECT id,
+       CONCAT(imie, ' ', nazwisko) as uczen 
+FROM uczniowie;
 
+Zad.22 Wyświetl imiona uczniów wielkimi literami-
+SELECT id,
+       UPPER(imie) AS imie_duzymi_literami,
+       nazwisko
+FROM uczniowie 
+
+Zad.23 Wyświetl uczniów urodzonych w czerwcu-
+SELECT imie, nazwisko, data_urodzenia
+FROM uczniowie 
+WHERE MONTH(data_urodzenia) = 6
+ORDER BY data_urodzenia
+
+Zad.24 Znajdz uczniów urodzonych w czerwcu i grudniu
+SELECT imie,
+       nazwisko, 
+       data_urodzenia, 
+       TIMESTAMPDIFF(
+           year, 
+           data_urodzenia, 
+           CURDATE() 
+       ) AS wiek 
+       FROM uczniowie ORDER BY wiek DESC;
+
+Zad.25 Znajdz uczniów urodzonych w czerwcu lub grudniu
+SELECT imie, nazwisko, data_urodzenia, 
+       TIMESTAMPDIFF(year, data_urodzenia, CURDATE()) AS wiek 
+FROM uczniowie 
+WHERE MONTH(data_urodzenia) IN (6, 12) 
+ORDER BY wiek DESC;   
+
+Zad.28 Wyświetl najstarszego i najmłodszego ucznia według daty urodzenia 
+SELECT MIN(data_urodzenia) AS najstarszy,
+MAX(data_urodzenia) AS najmlodszy
+FROM uczniowie 
+
+Zad.29 Wyświetl uczniów mieszkających najliczniej reprezentowanej miejscowości 
+
+Zad.31 Wyświetl uczniów których imie ma dokładnie 5 liter-
+SELECT id, imie, nazwisko
+FROM uczniowie
+WHERE CHAR_LENGTH(imie) = 5
+ORDER BY imie;
