@@ -56,3 +56,27 @@ SELECT id, imie, nazwisko
 FROM uczniowie
 WHERE CHAR_LENGTH(imie) = 5
 ORDER BY imie;
+
+Zad.32 Wyświetl trzy ostatnie cyfry numeru telefonu każdego ucznia
+SELECT imie, nazwisko,
+       RIGHT(telefon, 3) AS koncowka_numeru
+FROM uczniowie
+ORDER BY nazwisko;
+
+Zad.33 Wyświetl nazwisko uczniów zapisane małymi literami 
+SELECT imie,
+       LOWER(nazwisko) AS nazwisko_male_litery
+FROM uczniowie;
+
+Zad.34 Wyświetl uczniów urodzonych w pierwszym kwartale roku
+SELECT imie, nazwisko, data_urodzenia
+FROM uczniowie
+WHERE MONTH(data_urodzenia) BETWEEN 1 AND 3
+ORDER BY data_urodzenia;
+
+Zad.35 Wyświetl datę urodzenia ucznia w formacie DD-MM_RRRR 
+SLECT imie, nazwisko, 
+      DATE_FORMAT (data_urodzenia, "%d-%m-%Y")
+          AS 
+FROM uczniowie
+ORDER BY nazwisko;
