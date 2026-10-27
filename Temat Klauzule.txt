@@ -79,4 +79,8 @@ SLECT imie, nazwisko,
       DATE_FORMAT (data_urodzenia, "%d-%m-%Y")
           AS 
 FROM uczniowie
-ORDER BY nazwisko;
+ORDER BY nazwisko
+
+Zad.3 dodaj ucznia bez podawania ID
+
+
